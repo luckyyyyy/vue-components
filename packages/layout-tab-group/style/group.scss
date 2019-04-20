@@ -1,0 +1,37 @@
+
+.x-layout-tab-group {
+  overflow: hidden;
+  position: relative;
+  // background: #060d24;
+  background: darken(#060d24, 3%);
+  &-scroll {
+    display: flex;
+    // padding: 0 20px;
+    border-bottom: 2px solid #2F354D;
+  }
+  &-more {
+    cursor: pointer;
+    background: #060d23;
+    width: 30px;
+    height: 100%;
+    line-height: 37px;
+    font-size: 20px;
+    border-bottom: 2px solid #2F354D;
+    position: absolute !important;
+    right: 0;
+    top: 0;
+    text-align: center;
+    i {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+    }
+    &:hover {
+      background: lighten(#2F354D, 5%);
+    }
+  }
+}
+
+.x-layout-tab-group-more-current {
+  color: #fff !important;
+}

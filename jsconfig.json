@@ -1,0 +1,15 @@
+{
+  "include": [
+    "./src/**/*",
+    "./packages/**/*"
+  ],
+  "compilerOptions": {
+    "target": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+  }
+}

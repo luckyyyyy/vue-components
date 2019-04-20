@@ -1,0 +1,17 @@
+
+.el-icon-arrow-up, .el-icon-arrow-left, .el-icon-arrow-right, .el-icon-arrow-down {
+  font-family: "perfma-icon" !important;
+}
+
+.el-icon-arrow-up::before {
+  content: "\e664";
+}
+.el-icon-arrow-left::before {
+  content: "\e662";
+}
+.el-icon-arrow-right::before {
+  content: "\e661";
+}
+.el-icon-arrow-down::before {
+  content: "\e665";
+}

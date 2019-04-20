@@ -1,0 +1,41 @@
+.x-layout-nav {
+  background: #060D26;
+  width: 100px;
+  position: relative;
+  &-menu {
+    position: relative;
+    z-index: 1;
+    color: #878CA5;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    height: 87px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-icon {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    &:hover {
+      color: #4c9fde;
+    }
+    &.router-link-active {
+      color: #fff;
+    }
+  }
+  &-background {
+    z-index: 0;
+    position: absolute;
+    width: 100px;
+    left: 0;
+    top: 0;
+    height: 87px;
+    background: #121933;
+    &.animation {
+      transition: top .5s ease;
+    }
+  }
+}

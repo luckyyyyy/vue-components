@@ -1,0 +1,18 @@
+stages:
+  - ddev
+
+ddev:
+  stage: ddev
+  cache:
+    paths:
+      - node_modules
+      - yarn.lock
+  script:
+    - yarn
+    - yarn compile
+    - yarn build
+    - rm -rf /data/wwwroot/components/*
+    - cp -rf dist/* /data/wwwroot/components/
+  only:
+    - master
+  allow_failure: false

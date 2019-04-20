@@ -1,0 +1,28 @@
+.el-popper[x-placement^=top] .popper__arrow, .el-popper[x-placement^=top] .popper__arrow::after {
+  border-top-color: #2E3960;
+}
+.el-popper[x-placement^=left] .popper__arrow, .el-popper[x-placement^=left] .popper__arrow::after {
+  border-left-color: #2E3960;
+}
+.el-popper[x-placement^=right] .popper__arrow, .el-popper[x-placement^=right] .popper__arrow::after {
+  border-right-color: #2E3960;
+}
+.el-popper[x-placement^=bottom] .popper__arrow, .el-popper[x-placement^=bottom] .popper__arrow::after {
+  border-bottom-color: #2E3960;
+}
+
+.el-tooltip__popper.is-dark {
+  background: #293359;
+}
+.el-tooltip__popper[x-placement^="bottom"] .popper__arrow::after {
+  border-bottom-color: #293359;
+}
+.el-tooltip__popper[x-placement^="top"] .popper__arrow::after {
+  border-top-color: #293359;
+}
+.el-tooltip__popper[x-placement^="left"] .popper__arrow::after {
+  border-left-color: #293359;
+}
+.el-tooltip__popper[x-placement^="right"] .popper__arrow::after {
+  border-right-color: #293359;
+}

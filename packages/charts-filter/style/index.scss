@@ -1,0 +1,58 @@
+.x-charts-filter {
+  display: flex;
+  position: relative;
+  .line {
+    display: flex;
+    height: 18px;
+    &-item {
+      cursor: pointer;
+      display: inline-block;
+      height: 18px;
+      &:first-child {
+        border-radius: 4px 0 0 4px;
+      }
+      &:last-child {
+        border-radius: 0 4px 4px 0;
+      }
+      &.active {
+        position: relative;
+        top: -4px;
+        height: 22px;
+      }
+    }
+  }
+  .items {
+    height: 20px;
+    display: flex;
+    color: #878CA5;
+    line-height: 1.2;
+    margin-left: 12px;
+    font-size: 12px;
+    .item {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      display: flex;
+      margin-right: 12px;
+      &:hover {
+        color: lighten(#878CA5, 10%)
+      }
+      &.active {
+        color: white;
+      }
+      i {
+        margin-right: 4px;
+        width: 12px;
+        height: 12px;;
+      }
+    }
+  }
+}
+.x-charts-filter.column {
+  flex-direction: column;
+  // justify-content: flex-end;
+  .items {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}

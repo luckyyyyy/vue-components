@@ -1,0 +1,17 @@
+/* Hook ui */
+$--color-primary: #0071CA;
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+$--color-text-placeholder: #878CA5;
+// $--color-text-regular: #fff;
+$--icon-color: #878CA5;
+$--select-multiple-input-color: #878CA5;
+// $--tooltip-color: #293359;
+$--tooltip-border-color: #293359;
+@import "~element-ui/packages/theme-chalk/src/index";
+@import 'table.scss';
+@import 'form.scss';
+@import 'popper.scss';
+@import 'dropdown.scss';
+@import 'messagebox.scss';
+@import 'font.scss';
+@import 'loading.scss';

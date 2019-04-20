@@ -1,0 +1,36 @@
+{
+  "tree": {
+    "input": "./packages/tree/index.js",
+    "name": "强壮的树"
+  },
+  "charts-filter": {
+    "input": "./packages/charts-filter/index.js",
+    "name": "分布选择器"
+  },
+  "affix": {
+    "input": "./packages/affix/index.js",
+    "name": "固钉"
+  },
+  "table": {
+    "input": "./packages/table/index.js",
+    "name": "表格"
+  },
+  "select-filter": {
+    "input": "./packages/select-filter/index.js",
+    "name": "筛选器"
+  },
+  "layout-nav": {
+    "input": "./packages/layout-nav/index.js",
+    "name": "布局NAV"
+  },
+  "layout-tab-group": {
+    "input": "./packages/layout-tab-group/index.js",
+    "name": "布局TAB"
+  },
+  "iconfont": {
+    "input": "./packages/iconfont/index.js",
+    "name": "iconfont"
+  }
+}
+
+

@@ -1,0 +1,35 @@
+.el-input__inner {
+  background: #1E284B;
+  border: none;
+  color: white;
+}
+.el-select-dropdown {
+  background: #2E3960;
+  border: none;
+}
+
+.el-select-dropdown__item {
+  color: #fff;
+}
+
+.el-select-dropdown__item.hover, .el-select-dropdown__item:hover {
+  background: #1A2447;
+}
+.el-select-dropdown__item {
+  color: #878CA5;
+}
+.el-select-dropdown__item.selected {
+  color: #fff;
+}
+.el-checkbox-button__inner {
+  background: none;
+  border-color: #878CA5;
+}
+.el-checkbox-button:first-child .el-checkbox-button__inner {
+  border-color: #878CA5;
+}
+.el-checkbox-button.is-checked .el-checkbox-button__inner,
+.el-checkbox-button.is-focus .el-checkbox-button__inner {
+  border-color: #878CA5;
+}
+// background: #0071CA;

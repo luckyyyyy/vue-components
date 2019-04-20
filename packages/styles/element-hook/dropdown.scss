@@ -1,0 +1,25 @@
+.el-dropdown-menu {
+  background: #293359;
+  border: 1px solid #293359;
+}
+.el-dropdown-menu__item {
+  color: #878CA5;
+}
+.el-dropdown-menu__item:not(.is-disabled):hover, .el-dropdown-menu__item:focus {
+  background-color: #1A2447;
+  color: #878CA5;
+}
+.el-dropdown-menu__item--divided {
+  border-top: 1px solid #878CA5;
+}
+.el-dropdown-menu__item.is-disabled {
+  color: #666;
+}
+.el-dropdown-menu__item--divided:before {
+  background-color: #878CA5;
+}
+.el-select-dropdown__item {
+  font-size: 12px;
+  line-height: 24px;
+  height: 24px;
+}

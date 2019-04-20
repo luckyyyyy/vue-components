@@ -1,0 +1,87 @@
+.x-tree-group, .x-tree-child {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.x-tree-child {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 20px;
+  position: relative;
+  // &::before { // 加线 现在有问题 不太好修
+  //   content: "";
+  //   position: absolute;
+  //   border-left: 1px solid #878CA5;
+  //   height: 100%;
+  //   top: 0;
+  //   left: 5px;
+  // }
+}
+.x-tree-group-status {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.x-tree-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #ddd;
+  padding: 3px 0;
+  box-sizing: border-box;
+  &-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    color: #878CA5;
+  }
+  &-name {
+    box-sizing: border-box;
+    padding: 2px;
+  }
+  &-btn {
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    // width: 12px;
+    height: 12px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .perfma-icon {
+      font-size: 12px;
+      transition: transform .3s;
+    }
+    .perfma-icon.down {
+      transform: rotate(90deg);
+    }
+    .perfma-icon.rotate {
+      animation: rotate 1s linear infinite;
+    }
+
+  }
+  // &-other {
+  //   display: inline-block;
+  //   overflow: hidden;
+  //   white-space: nowrap;
+  //   text-overflow: ellipsis;
+  //   padding: 0 10px;
+  // }
+  &:hover, &.active {
+    background: #293055;
+    transition: background .2s ease-out;
+    color: white;
+  }
+}
+
+
+@keyframes rotate {
+  from {
+    transform:rotate(0)
+  }
+  to {
+    transform:rotate(360deg)
+  }
+}

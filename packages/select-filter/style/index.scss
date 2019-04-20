@@ -1,0 +1,52 @@
+.x-select-filter {
+  display: flex;
+  // height: 28px;
+  .el-select {
+    margin: 3px 0;
+    width: 150px;
+    align-self: flex-start;
+  }
+  .label {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    flex-wrap: wrap;
+    flex: 1;
+    &-item {
+      cursor: pointer;
+      color: #878CA5;
+      margin: 3px;
+      border-radius: 2px;
+      border: 1px solid #878CA5;
+      padding: 0 10px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      transition: color .2s ease-in-out,
+                  border .2s ease-in-out,
+                  background .2s ease-in-out;
+      &-num {
+        margin-left: 5px;
+        text-align: center;
+        font-family: ArialMT;
+        background: #878CA5;
+        border-radius: 8px;
+        min-width: 16px;
+        height: 12px;
+        line-height: 14px;
+        font-size: 10px;
+        font-style: normal;
+        color: #1E284B;
+        display: inline-block;
+      }
+      &:hover, &.active {
+        background: #0071CA;
+        border: 1px solid #0071CA;
+        color: #fff;
+        .label-item-num {
+          background: #fff;
+        }
+      }
+    }
+  }
+}
