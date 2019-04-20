@@ -25,11 +25,11 @@
 
 由于没时间，命令比较粗略，只满足了最基本的使用需求。
 
-yarn dev 打开文档+组件开发调试
-yarn build 文档生产
-yarn lint （ESLINT 暂时没时间检查）
-yarn lint:style （STYLELINT 暂时没时间检查）
-yarn rollup 创建lib目录 单组件
-yarn lib 创建所有组件的js包
-yarn compile 命令合集
-yarn pub 内网发布
+ * yarn dev 打开文档+组件开发调试
+ * yarn build 文档生产
+ * yarn lint （ESLINT 暂时没时间检查）
+ * yarn lint:style （STYLELINT 暂时没时间检查）
+ * yarn rollup 创建lib目录 单组件
+ * yarn lib 创建所有组件的js包
+ * yarn compile 命令合集
+ * yarn pub 内网发布
