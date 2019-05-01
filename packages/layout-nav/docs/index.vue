@@ -13,6 +13,6 @@ export default {
         <Basic />
       </div>
     );
-  }
-}
+  },
+};
 </script>

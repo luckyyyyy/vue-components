@@ -8,7 +8,7 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 const path = require('path');
 const moment = require('moment');
-const utils = require('../utils');
+const isDevelop = process.env.NODE_ENV === 'development';
 
 module.exports = {
   env: {
@@ -16,7 +16,7 @@ module.exports = {
     ROUTER_MODE: process.env.ROUTER_MODE,
     // PUBLIC_PATH: process.env.PUBLIC_PATH,
     PUBLIC_PATH: '/',
-    BUILD_TIME: moment().format('YMMDDHHmm'),
+    BUILD_TIME: isDevelop ? 'development' : moment().format('YMMDDHHmm'),
   },
   host: '0.0.0.0',
   port: 8080,
@@ -37,5 +37,5 @@ module.exports = {
   // (https://github.com/webpack/css-loader#sourcemaps)
   // In our experience, they generally work as expected,
   // just be aware of this issue when enabling this option.
-  sourceMap: utils.isDevelop,
+  sourceMap: isDevelop,
 };

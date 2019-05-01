@@ -3,13 +3,11 @@ import components from '../../components.json';
 
 export default {
   render() {
-    const router = Object.keys(components).map((component) => {
-      return (
+    const router = Object.keys(components).map(component => (
         <router-link class="sidebar-item" tag="div" to={{ name: `components/${component}` }}>
           { `${component} ${components[component].name}` }
         </router-link>
-      );
-    });
+    ));
     return (
       <x-affix>
         <div class="sidebar">

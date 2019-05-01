@@ -55,7 +55,7 @@ const webpackConfig = {
   },
   module: {
     rules: [
-      ...loader.styleLoaders(!utils.isDevelop),
+      ...loader.styleLoaders(true),
       ...loader.vueLoaders(),
       ...loader.scriptLoaders(),
       ...loader.docLoaders(),

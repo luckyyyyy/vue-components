@@ -133,6 +133,7 @@ export default {
         if (!this.bsInstance) {
           this.bsInstance = new BScroll(this.$refs.$wrapper, {
             scrollX: true,
+            click: true,
             // observeDOM: false,
             bounce: false,
             // scrollbar: true,
@@ -155,7 +156,7 @@ export default {
       this.onSelect(val);
       this.$nextTick(() => {
         this.ignorewatch = false;
-      })
+      });
     },
     onSelect(val) {
       if (this.value === val) {

@@ -6,24 +6,24 @@
  */
 
 import Popper from 'popper.js';
-import Vue from 'vue';
+import Vue, { VNode } from 'vue';
 import debounce from 'lodash/debounce';
 
 let popperInstance: Popper
 let fn: Function;
 
-export default new Vue({
+export default Vue.extend({
   data() {
     return {
       popperContent: '',
       enter: false,
     };
   },
-  render() {
+  render(): VNode {
     return (
-    <div v-show={this.enter && this.popperContent} class="table-popper" ref="$popper">
-      <div class="table-popper-content" domPropsInnerHTML={this.popperContent}></div>
-    </div>
+      <div v-show={this.enter && this.popperContent} class="table-popper" ref="$popper">
+        <div class="table-popper-content" domPropsInnerHTML={this.popperContent}></div>
+      </div>
     );
   },
   created() {
@@ -34,24 +34,34 @@ export default new Vue({
           popperInstance = new Popper(el, this.$refs.$popper, {
             placement: 'top',
           });
+          const checkConnected = () => {
+            if (this.enter && el.isConnected === true) {
+              setTimeout(() => {
+                checkConnected();
+              }, 0);
+            } else if (el.isConnected === false) {
+              this.hide();
+            }
+          }
+          checkConnected();
         }
       }
     }, 500);
   },
   methods: {
     show(el: Element, content?: string) {
-      this.enter = true
-      el.addEventListener('mouseleave', this._hidePopper, false);
+      this.enter = true;
+      el.addEventListener('mouseleave', this.hide, false);
       fn(el, content);
     },
-    _hidePopper(e: Event) {
+    hide(e?: Event) {
       this.popperContent = '';
       if (popperInstance) {
         popperInstance.destroy();
       }
       this.enter = false;
-      if (e.target instanceof Element) {
-        e.target.removeEventListener('mouseleave', this._hidePopper, false);
+      if (e && e.target instanceof Element) {
+        e.target.removeEventListener('mouseleave', this.hide, false);
       }
     },
   },

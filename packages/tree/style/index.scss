@@ -1,3 +1,5 @@
+@import '../../styles/base.scss';
+
 .x-tree-group, .x-tree-child {
   list-style: none;
   margin: 0;
@@ -27,7 +29,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  color: #ddd;
+  color: $tree-item-color;
   padding: 3px 0;
   box-sizing: border-box;
   &-icon {
@@ -35,7 +37,7 @@
     justify-content: center;
     align-items: center;
     width: 20px;
-    color: #878CA5;
+    color: $tree-item-icon-color;
   }
   &-name {
     box-sizing: border-box;
@@ -70,9 +72,9 @@
   //   padding: 0 10px;
   // }
   &:hover, &.active {
-    background: #293055;
+    background: $tree-item-hover-background;
     transition: background .2s ease-out;
-    color: white;
+    color: $tree-item-hover-color;
   }
 }
 

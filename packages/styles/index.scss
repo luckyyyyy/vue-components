@@ -1,1 +1,25 @@
-// @import './perfma-icon/iconfont.css';
+/**
+ * This file is part of the PerfMa.
+ * @link     : http://perfma.com
+ * @author   : William Chan (wei.chen@perfma.com)
+ * @copyright: Copyright (c) 2019 Hangzhou perfma Network Technology Co., Ltd.
+ */
+
+@import './perfma-icon/iconfont.scss';
+
+// affix
+@import '../affix/style/index.scss';
+// charts-filter
+@import '../charts-filter/style/index.scss';
+// layout-nav
+@import '../layout-nav/style/index.scss';
+// layout-tab-group
+@import '../layout-tab-group/style/group.scss';
+@import '../layout-tab-group/style/tab.scss';
+// select-filter
+@import '../select-filter/style/index.scss';
+// tree
+@import '../tree/style/index.scss';
+// table
+@import '../table/style/index.scss';
+@import '../table/style/popper.scss';

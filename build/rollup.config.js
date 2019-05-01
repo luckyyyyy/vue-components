@@ -51,6 +51,7 @@ module.exports = Object.keys(Components).map((component) => {
       return ['vue', 'popper.js', 'better-scroll'].includes(id) ||
         /^@babel/.test(id) ||
         /^lodash/.test(id) ||
+        /^@vue/.test(id) ||
         /^vue-runtime-helpers/.test(id)
     },
   }

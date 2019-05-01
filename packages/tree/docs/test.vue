@@ -27,11 +27,6 @@ export default {
       default: () => [],
     },
   },
-  methods: {
-    onAdd() {
-      this.value.push({ name: 'xx123' });
-    },
-  },
   data() {
     return {
       columns: [
@@ -41,5 +36,10 @@ export default {
       ],
     };
   },
-}
+  methods: {
+    onAdd() {
+      this.value.push({ name: 'xx123' });
+    },
+  },
+};
 </script>

@@ -11,10 +11,10 @@ import { name, version } from '../../package.json';
 export default {
   data() {
     return {
-      name, version
-    }
+      name, version,
+    };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

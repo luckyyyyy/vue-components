@@ -46,7 +46,6 @@ export default {
 <style lang="scss" scoped>
 .tree {
   padding: 20px;
-  background: #121933;
 }
 </style>
 

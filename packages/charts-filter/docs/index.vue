@@ -3,7 +3,7 @@ import Basic from './basic.md';
 import Column from './column.md';
 import None from './none.md';
 import Multiple from './multiple.md';
-import Color from './color.md'
+import Color from './color.md';
 
 
 const markdown = `# ChartsFilter 分布选择器
@@ -22,6 +22,6 @@ export default {
         <Color />
       </div>
     );
-  }
-}
+  },
+};
 </script>

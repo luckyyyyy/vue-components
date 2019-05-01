@@ -2,21 +2,22 @@
   <div
     class="markdown"
     v-html="marked(text)"
-  />
+  ></div>
 </template>
 <script>
 import marked from 'marked';
+
 const renderer = new marked.Renderer();
 renderer.heading = function (text, level) {
-  return '<h' +
-    level +
-    ' id="' +
-    text.replace(/[^\w]+/g, '-') +
-    '">' +
-    text +
-    '</h' +
-    level +
-    '>\n';
+  return `<h${
+    level
+  } id="${
+    text.replace(/[^\w]+/g, '-')
+  }">${
+    text
+  }</h${
+    level
+  }>\n`;
 };
 marked.setOptions({
   renderer,
@@ -30,18 +31,18 @@ marked.setOptions({
 });
 export default {
   name: 'md',
+  inject: {
+    demoContext: { default: {} },
+  },
   props: {
     md: String,
   },
-  inject: {
-    demoContext: { default: {}},
-  },
-  data () {
+  data() {
     let text = '';
     if (this.$slots.default && this.$slots.default[0] && this.$slots.default[0].text) {
       text = this.$slots.default[0].text;
     } else {
-      text = this.md
+      text = this.md;
     }
     text = text || '';
     text = text.split('\n').map(t => t.trim()).join('\n');

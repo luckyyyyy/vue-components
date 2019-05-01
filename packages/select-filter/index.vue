@@ -64,8 +64,27 @@ export default {
       select: '',
     };
   },
-  created() {
-    this.select = this.getCurrentSelect(); // calc default
+  computed: {
+    selects() {
+      return this._options.map(item => ({ value: item.key || item.option, label: item.option }));
+    },
+    labels() {
+      const index = this._options.findIndex(item => item.key === this.select || item.option === this.select);
+      if (this._options[index] && this._options[index].labels) {
+        return this._options[index].labels;
+      }
+      return [];
+    },
+    _options() {
+      if (this.encodeKey) {
+        const options = this.options.map((items) => {
+          const labels = items.labels.map(label => ({ ...label, key: this.encodeKey(items.key, label.key) }));
+          return { ...items, labels };
+        });
+        return options;
+      }
+      return this.options;
+    },
   },
   watch: {
     options() {
@@ -80,31 +99,8 @@ export default {
   //     }
   //   },
   },
-  computed: {
-    selects() {
-      return this._options.map(item => ({ value: item.key || item.option, label: item.option }));
-    },
-    labels() {
-      const index = this._options.findIndex(item => item.key === this.select || item.option === this.select);
-      if (this._options[index] && this._options[index].labels) {
-        return this._options[index].labels;
-      } else {
-        return [];
-      }
-    },
-    _options() {
-      if (this.encodeKey) {
-        const options = this.options.map((items) => {
-          const labels = items.labels.map((label) => {
-            return { ...label, key: this.encodeKey(items.key, label.key) };
-          });
-          return { ...items, labels };
-        })
-        return options;
-      } else {
-        return this.options;
-      }
-    },
+  created() {
+    this.select = this.getCurrentSelect(); // calc default
   },
   methods: {
     onSelect(key) {

@@ -21,11 +21,11 @@ import './styles/perfma-icon/iconfont.css';
 
 const ENV = process.env.NODE_ENV;
 if (
-  ENV !== 'production' &&
-  ENV !== 'test' &&
-  typeof console !== 'undefined' &&
-  console.log &&
-  typeof window !== 'undefined'
+  ENV !== 'production'
+  && ENV !== 'test'
+  && typeof console !== 'undefined'
+  && console.log
+  && typeof window !== 'undefined'
 ) {
   console.log(`%c @perfma/components %c v${version} `, 'background:#555;color:#fff', 'background: #41c23e;color:#fff');
   // console.warn(
@@ -42,11 +42,11 @@ const components = [
   LayoutNav,
   LayoutTabGroup,
   Iconfont,
-  TreeGroup
+  TreeGroup,
 ];
 
-const install = function(Vue) {
-  components.map(component => {
+const install = function (Vue) {
+  components.map((component) => {
     Vue.use(component);
   });
 };
@@ -64,7 +64,7 @@ export {
   LayoutNav,
   LayoutTabGroup,
   Iconfont,
-  TreeGroup
+  TreeGroup,
 };
 
 export default {

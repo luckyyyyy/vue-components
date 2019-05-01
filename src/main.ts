@@ -27,6 +27,8 @@ import {
   Col,
   Message,
   Loading,
+  Checkbox,
+  Radio,
 } from 'element-ui';
 
 import 'normalize.css';
@@ -54,6 +56,8 @@ Vue.use(DropdownItem);
 Vue.use(Row);
 Vue.use(Col);
 Vue.use(Loading);
+Vue.use(Checkbox);
+Vue.use(Radio);
 Vue.prototype.$message = Message;
 // API专用组件
 Vue.component(DemoBox.name, DemoBox);

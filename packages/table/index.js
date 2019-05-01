@@ -13,7 +13,7 @@ import './style/index.js';
 if (document) {
   const $tablePopper = document.getElementById('#table-popper');
   if (!$tablePopper) {
-    const popper = Popper.$mount();
+    const popper = new Vue(Popper).$mount();
     document.body.appendChild(popper.$el);
     Vue.prototype.$tablePopper = popper;
   }

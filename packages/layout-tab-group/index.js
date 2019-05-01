@@ -17,5 +17,5 @@ LayoutTabGroup.install = (Vue) => {
 
 export {
   LayoutTab,
-  LayoutTabGroup
+  LayoutTabGroup,
 };

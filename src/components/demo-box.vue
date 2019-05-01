@@ -9,15 +9,15 @@
           <iframe
             :src="iframeDemo[iframeDemoKey]"
             height="360"
-          />
+          ></iframe>
         </div>
       </template>
       <template v-else>
-        <slot name="component" />
+        <slot name="component"></slot>
       </template>
     </section>
     <section class="code-box-meta markdown">
-      <slot name="description" />
+      <slot name="description"></slot>
       <!-- <a-tooltip :title="codeExpand ? 'Hide Code' : 'Show Code'">
         <span class="code-expand-icon">
           <img
@@ -57,7 +57,7 @@
             class="code-box-code-copy"
           />
         </a-tooltip> -->
-        <slot name="code" />
+        <slot name="code"></slot>
       </section>
     </transition>
   </section>
@@ -67,17 +67,17 @@
 // import BaseMixin from 'antd/_util/BaseMixin';
 // import { isZhCN } from '../util';
 export default {
-  name: 'DemoBox',
+  name: 'demo-box',
+  inject: {
+    iframeDemo: { default: {} },
+    demoContext: { default: {} },
+  },
   // mixins: [BaseMixin],
   props: {
     jsfiddle: Object,
     isIframe: Boolean,
   },
-  inject: {
-    iframeDemo: { default: {}},
-    demoContext: { default: {}},
-  },
-  data () {
+  data() {
     const { name = '' } = this.demoContext;
     const { us, cn, sourceCode } = this.jsfiddle;
     // let sourceCode = `<template>${html}</template>\n`
@@ -108,14 +108,14 @@ export default {
     };
   },
   methods: {
-    handleCodeExpand  ()  {
+    handleCodeExpand() {
       this.codeExpand = !this.codeExpand;
     },
-    handleCodeCopied () {
+    handleCodeCopied() {
       this.setState({ copied: true });
     },
 
-    onCopyTooltipVisibleChange (visible) {
+    onCopyTooltipVisibleChange(visible) {
       if (visible) {
         this.setState({
           copyTooltipVisible: visible,

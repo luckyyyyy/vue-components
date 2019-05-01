@@ -1,0 +1,30 @@
+/**
+ * This file is part of the PerfMa.
+ * @link     : http://perfma.com
+ * @author   : William Chan (wei.chen@perfma.com)
+ * @copyright: Copyright (c) 2019 Hangzhou perfma Network Technology Co., Ltd.
+ */
+
+// tree
+$tree-item-color: #ddd !default;
+$tree-item-icon-color: #878CA5 !default;
+$tree-item-hover-color: #fff !default;
+$tree-item-hover-background: #293055 !default;
+
+// table
+$table-head-font-color: #7A8DA2 !default;
+$table-head-background: #1a2240 !default;
+$table-head-hover-background: lighten($table-head-background, 2%) !default;
+$table-head-sort-icon: #878CA5 !default;
+$table-head-sort-icon-hover: lighten($table-head-sort-icon, 20%) !default;
+$table-head-sort-icon-active: #4C9FDE !default;
+$table-border-color: #2F354D !default;
+$table-font-color: #ddd !default;
+$table-row-hover-background: #293055 !default;
+$table-stat-row-background: #121933 !default;
+$table-expand-icon: #878CA5 !default;
+$table-empty-background: #293154 !default;
+$table-empty-font-color: #aaa !default;
+$table-tooltip-background: #00599E !default;
+$table-tooltip-box-shadow: #222 !default;
+$table-tooltip-font-color: #ddd !default;
